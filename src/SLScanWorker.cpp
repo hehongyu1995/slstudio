@@ -144,7 +144,7 @@ void SLScanWorker::setup(){
 
         projector->setPattern(i, pattern.ptr(), pattern.cols, pattern.rows);
 
-//        cv::imwrite(cv::format("pat_%d.bmp", i), pattern);
+        cv::imwrite(cv::format("pat_%d.bmp", i), pattern);
     }
 
 //    // Upload patterns to projector/GPU in compact resolution (texture)

@@ -36,23 +36,23 @@ ProjectorLC4500::ProjectorLC4500(unsigned int): nPatterns(0), isRunning(false){
         showError("Error Setting Power Mode");
     }
 
-    // Set LED selection
-    const bool SeqCtrl  = false; // manual (false) or automatic (true)
-    const bool LEDRed  = false;
-    const bool LEDGreen  = false;
-    const bool LEDBlue  = true;
-    LCR_SetLedEnables(SeqCtrl, LEDRed, LEDGreen,  LEDBlue);
+//    // Set LED selection
+//    const bool SeqCtrl  = false; // manual (false) or automatic (true)
+//    const bool LEDRed  = false;
+//    const bool LEDGreen  = false;
+//    const bool LEDBlue  = true;
+//    LCR_SetLedEnables(SeqCtrl, LEDRed, LEDGreen,  LEDBlue);
 
     // Set LED currents
     const unsigned char RedCurrent = 0;
     const unsigned char GreenCurrent = 0;
     const unsigned char BlueCurrent = 100;
-    LCR_SetLedCurrents(255-RedCurrent, 255-GreenCurrent, 255-BlueCurrent);
+    LCR_SetLedCurrents(100,110, 115);
 
-    unsigned char Red;
-    unsigned char Green;
-    unsigned char Blue;
-    LCR_GetLedCurrents(&Red, &Green, &Blue);
+//    unsigned char Red;
+//    unsigned char Green;
+//    unsigned char Blue;
+//    LCR_GetLedCurrents(&Red, &Green, &Blue);
 
 //    // Set to pattern sequence mode
 //    const bool patternSequenceMode = true;
